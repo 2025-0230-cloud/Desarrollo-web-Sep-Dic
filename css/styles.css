@@ -1,0 +1,128 @@
+/* ==========================================
+   ESTILOS PARA EL BLOG DE NOTICIAS (CARDS)
+   ========================================== */
+
+.contenedor-noticias {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.titulo-seccion {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+/* Cuadrícula adaptable para acomodar las noticias */
+.grid-noticias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+/* Tarjeta individual de la noticia */
+.tarjeta-noticia {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 340px; /* Ancho uniforme para todas las tarjetas */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto al pasar el cursor sobre la noticia */
+.tarjeta-noticia:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+}
+
+/* Imagen superior de la tarjeta */
+.imagen-noticia {
+    width: 100%;
+    height: 190px;
+    object-fit: cover; /* Evita que las imágenes se deformen */
+}
+
+/* Texto e información dentro de la tarjeta */
+.cuerpo-noticia {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.cuerpo-noticia h3 {
+    font-size: 16px;
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+/* Botón estilo "Leer más" */
+.boton-leer-mas {
+    display: inline-block;
+    text-align: center;
+    background-color: #2c3e50;
+    color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.boton-leer-mas:hover {
+    background-color: #e74c3c; /* Cambia a un color rojo prensa al pasar el cursor */
+}
+
+/* ==========================================
+   CARRUSEL AUTOMÁTICO SIMPLE (CSS)
+   ========================================== */
+
+/* Ventana visible del carrusel */
+.carrusel-simple {
+    width: 100%;
+    max-width: 800px; /* Ancho máximo en pantalla */
+    height: 400px;    /* Altura fija para el contenedor */
+    margin: 20px auto;
+    overflow: hidden; /* Oculta las imágenes que están fuera de vista */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Tira horizontal que contiene todas las imágenes */
+.carrusel-pista {
+    display: flex;
+    width: 400%; /* 100% por cada una de las 4 imágenes */
+    height: 100%;
+    animation: cambiarImagen 12s infinite ease-in-out; /* 12s total (3s por foto) */
+}
+
+/* Ajuste de cada imagen dentro de la pista */
+.carrusel-pista img {
+    width: 25%; /* Cada imagen ocupa 1/4 del ancho total del contenedor */
+    height: 100%;
+    object-fit: cover; /* Mantiene la proporción sin deformar la foto */
+}
+
+/* Animación que desplaza la pista de imágenes */
+@keyframes cambiarImagen {
+    0%   { transform: translateX(0%); }       /* Foto 1 visible durante ~3s */
+    25%  { transform: translateX(0%); }
+    
+    33%  { transform: translateX(-25%); }     /* Transición a Foto 2 */
+    58%  { transform: translateX(-25%); }     /* Foto 2 visible durante ~3s */
+    
+    66%  { transform: translateX(-50%); }     /* Transición a Foto 3 */
+    91%  { transform: translateX(-50%); }     /* Foto 3 visible durante ~3s */
+    
+    100% { transform: translateX(-75%); }     /* Vuelve suavemente al inicio */
+}
