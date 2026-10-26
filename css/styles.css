@@ -1,0 +1,309 @@
+/* 
+ESTILOS GENERALES Y FUENTES
+*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;/* Helvetica, sans-serif;*/
+    background-color: #f5f4f0; /* Fondo beige claro */
+    color: #1a1a1a;
+}
+/* 
+1. ENCABEZADO Y NAVEGACIÓN
+    */
+.encabezado-sitio {
+    background-color: #f5f4f0;
+    padding: 15px 40px;
+}
+
+.contenedor-header {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 45px; /* Ajusta la altura de tu imagen de logo */
+}
+
+.navegacion-principal ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+}
+
+.navegacion-principal a {
+    text-decoration: none;
+    color: #222222;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.iconos-header {
+    display: flex;
+    gap: 15px;
+}
+
+.iconos-header .icono {
+    font-size: 20px;
+    color: #1a1a1a;
+    text-decoration: none;
+}
+
+/* 
+2. SECCIÓN HERO (BANNER CON LA IMAGEN)
+  */
+.seccion-hero {
+    position: relative;
+    width: 100%;
+    height: 420px;
+    /* Imagen de fondo */
+    background: linear-gradient(rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0.45)), 
+                url('../assets/fondo.png') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.contenido-hero h1 {
+    font-size: 48px;
+    font-weight: 400;
+    color: #0b0b0b;
+    margin-bottom: 25px;
+    line-height: 1.2;
+}
+.acciones-hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Botón "Conoce más" ovalado azul oscuro */
+.boton-conoce-mas {
+    background-color: #004b6e;
+    color: #ffffff;
+    padding: 12px 35px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+/* Botón circular de reproducción (Play) */
+.boton-play {
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 4px; /* Ajuste óptico del icono de flecha */
+}
+
+/* 
+3. BARRA INFERIOR DE FILTROS / BUSCADOR
+    */
+.contenedor-filtros {
+    background-color: #f5f4f0;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.barra-filtros {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Desplegables con borde negro marcado */
+.campo-filtro select {
+    width: 180px;
+    height: 42px;
+    background-color: #f5f4f0;
+    border: 2px solid #000000;
+    border-radius: 6px;
+    padding: 0 10px;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+}
+
+/* Botón turquesa con flecha */
+.boton-buscar {
+    background-color: #17b9a5;
+    color: #ffffff;
+    border: none;
+    height: 42px;
+    width: 110px;
+    border-radius: 6px;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 
+DISENO RESPOSIVO
+ */
+
+/* 1. TABLETAS Y PANTALLAS MEDIANAS (Hasta 1024px) */
+@media (max-width: 1024px) {
+    .contenedor-header {
+        padding: 0 20px;
+    }
+
+    .seccion-hero {
+        height: 380px;
+    }
+
+    .contenido-hero h1 {
+        font-size: 38px;
+    }
+
+    .barra-filtros {
+        gap: 12px;
+    }
+
+    .campo-filtro select {
+        width: 150px;
+    }
+}
+
+/* TELÉFONOS MÓVILES (Hasta 768px) */
+@media (max-width: 768px) {
+
+    /* Encabezado: Apila el logo, menú e iconos en vertical */
+    .encabezado-sitio {
+        padding: 15px 20px;
+    }
+
+    .contenedor-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .navegacion-principal ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* Banner Principal: Ajusta tamaños para pantallas pequeñas */
+    .seccion-hero {
+        height: auto;
+        min-height: 320px;
+        padding: 40px 15px;
+    }
+
+    .contenido-hero h1 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .acciones-hero {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .boton-conoce-mas {
+        width: 100%;
+        max-width: 250px;
+        text-align: center;
+    }
+
+    /* Buscador: Apila las opciones y botones al 100% de ancho */
+    .contenedor-filtros {
+        padding: 20px 15px;
+    }
+
+    .barra-filtros {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .campo-filtro,
+    .campo-filtro select, 
+    .boton-buscar {
+        width: 100%;
+    }
+
+    .boton-buscar {
+        margin-top: 5px;
+    }
+}
+
+/* 
+   FORMULARIO DE CONTACTO 
+*/
+.contenedor-contacto-sencillo {
+    max-width: 480px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.caja-formulario {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    text-align: center;
+}
+
+.caja-formulario h1 {
+    font-size: 26px;
+    color: #0f172a;
+    margin-bottom: 6px;
+}
+
+.caja-formulario p {
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.caja-formulario form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.caja-formulario input,
+.caja-formulario textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.caja-formulario button {
+    background-color: #0284c7;
+    color: #ffffff;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.caja-formulario button:hover {
+    background-color: #0369a1;
+}

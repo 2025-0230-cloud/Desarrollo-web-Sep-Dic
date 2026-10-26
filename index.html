@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Real Estate</title>
+    <link rel="stylesheet" href="css/styles.css">  
+</head>
+<body>
+    <header class="encabezado-sitio">
+        <div class="contenedor-header">
+            
+            <!-- Logo de la empresa -->
+            <div class="logo">
+                <img src="assets/logo-casas.png" alt="Inmobiliaria Logo">
+            </div>
+
+            <!-- Menú pricipal-->
+            <nav class="navegacion-principal">
+                <ul>
+                    <li><a href="index.html" class="activo">Inicio</a></li>
+                    <li><a href="listado-propiedades.html">Lista de propiedades</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav> 
+
+            <!-- Iconos esenciales  -->
+            <div class="iconos-header">
+                <a href="#"><span class="icono">🔍</span></a>
+                <a href="#"><span class="icono">👤</span></a>
+                <a href="#"><span class="icono">🛒</span></a>
+            </div>
+
+        </div>
+    </header>
+    <main> 
+        <div class="seccion-hero">
+            <div class="contenido-hero">
+                <h1>Tu oportunidad en<br>la zona sur</h1>
+                <div class="acciones-hero">
+                    <a href="listado-propiedades.html" class="boton-conoce-mas">Conoce más</a>
+                    <button class="boton-play">▶</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- FILTROS y BÚSQUEDA -->
+        <div class="contenedor-filtros">
+            <div class="barra-filtros">
+                
+                <div class="campo-filtro">
+                    <select>
+                        <option value="">Tipo de propiedad</option>
+                        <option value="casa">Casa</option>
+                        <option value="apartamento">Apartamento</option>
+                    </select> 
+                </div>
+                <div class="campo-filtro">
+                    <select>
+                        <option value="">Ubicación</option> 
+                        <option value="Sur-profundo;">Sur profundo</option>
+                        <option value="Sacristobal;">Sancristobal</option>
+                    </select>
+                </div>
+
+                <div class="campo-filtro">
+                    <select>
+                        <option value=""> Rango de Precio</option>
+                        <option value="1">$50,000 - $100,000</option>
+                        <option value="2">$100,000 - $250,000</option>
+                    </select>
+                </div>
+
+                <button class="boton-buscar">➔</button>
+
+            </div>
+        </div>
+    </main>
+    
+</body>
+</html>
